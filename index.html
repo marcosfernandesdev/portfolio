@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <title>Portifólio</title>
+    <style>
+        :root{
+            --cor1: #61C9A8;
+            --cor2: #0E103D;
+        }
+        body{
+            height: 97.6vh;
+            background-image: linear-gradient(to bottom, #61C9A8, #0E103D);
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+        header{
+            display: flex;
+            justify-content: end;
+        }
+        nav{
+            display: flex;
+        }
+        nav > div{
+            margin: 1px 10px;
+            font-size: 1.6em;
+        }
+        .secao{
+            background-color: white;
+            width: 150px;
+            height: auto;
+            padding: 10px;
+            border-radius: 10px;
+            display: none;
+            z-index: 1;
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+        }
+        nav > div:hover > div{
+            display: block;
+        }
+        .secao > a {
+            color: var(--cor2);
+            font-size: 1.1em;
+            text-decoration: none;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            display: block;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+
+
+        #principal{
+            font-size: 1.7em;
+            text-align: center;
+            width: 50%;
+            height: 100px;
+            margin: auto;
+            position: relative;
+            top: 30vh;
+        }
+        h1{
+            font-size: 1.8em;
+        }
+        p{
+            font-family: 'M PLUS 1 Code', sans-serif;
+            color: white;
+        }
+        #html{color: rgb(240, 128, 0); text-shadow: 0px 0px 5px  rgba(0, 0, 0, 0.3);}
+        #css{color: rgb(0, 162, 255); text-shadow: 0px 0px 5px  rgba(0, 0, 0, 0.3);}
+        #js{color: rgb(255, 255, 50);}
+
+        
+
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+                <div id="contato">Contato
+                    <div class="secao">
+                        <a href="#" rel="">e-mail</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div> 
+                <div id="projetos">Projetos
+                    <div class="secao">
+                        <a href="./calculadora/index.html">Calculadora</a>
+                        <a href="./jokenpo/index.html">Jokenpo</a>
+                        <a href="./gorjeta/index.html">Calculadora de gorjeta</a>
+                        <a href="./imc/index.html">Calculador de Imc</a>
+                        <a href="./bhaskara/index.html">Fórmula de Bhaskara</a>
+                        <a href="./formulario/index.html">Formulário</a>
+                        <a href="./landing_page/index.html">Landing page</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section id="principal">
+            <h1>Marcos Fernandes</h1>
+            <p>Experiência com <span id="html">HTML</span>,<span id="css"> CSS</span> e <span id="js">JavaScript</span>.</p>
+        </section>
+
+        <article>
+            <picture>
+                <img src="" alt="">
+            </picture>
+        </article>
+    </main>
+    <footer></footer>
+</body>
+</html>

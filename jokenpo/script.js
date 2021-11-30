@@ -9,7 +9,7 @@ var pe = 'pe';
 var pa = 'pa';
 var te = 'te';
 
-//alert('Você tem 3 opções e irá jogar contra a máquina. Ao atingir 10 pontos será reiniciado.')
+alert('Você tem 3 opções e irá jogar contra a máquina. Ao atingir 10 pontos será reiniciado.')
 function zerar() { //vai zerar os pontos e limpar os campos 
     pontoJ = 0;
     pontoM = 0;
