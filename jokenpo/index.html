@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jokenpo</title>
+</head>
+<body> 
+    <main>
+        <h1>Jokenpo</h1>
+        <section class="placar">
+            <div>Jogador <span id="pontosJogador">0</span></div>
+            <h2>Placar</h2>
+            <div>Máquina <span id="pontosMaquina">0</span></div>
+        </section>
+
+        <div id="resultado">
+            <div id="escolhaDoJogador"></div><div id="escolhaDaMaquina"></div>
+        </div>
+        <span id="status"></span>
+
+        <div class="opcoes" >
+            <button id="pedra" onclick="jogar('pe',1)"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828186.png" alt="pedra" width="60px">  </button>
+            <button id="papel" onclick="jogar('pa',2)"><img src="https://cdn-icons-png.flaticon.com/128/1692/1692912.png" alt="papel" width="60px"></button>
+            <button id="tesoura" onclick="jogar('te',3), adicionarFoto(3)"> <img src="https://cdn-icons-png.flaticon.com/512/2617/2617721.png" alt="tesoura" width="60px"> </button>
+        </div>
+
+        <button id="zerar" onclick="zerar() ">Zerar</button>
+    </main>
+
+    <footer>Feito por <Strong>Marcos Fernandes</Strong></footer>
+    
+</body>
+<script src="script.js"></script>
+</html>

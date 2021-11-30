@@ -1,0 +1,140 @@
+@charset "UTF-8";
+body{
+    background-color: rgb(7, 0, 44);
+    color: white;
+    margin: 0px;
+    padding: 5px 0px 0px 5px;
+    font-size: 20px;
+    font-family: 'Arsenal', sans-serif;
+}
+main{
+    width: 100%;
+}
+.titulo{
+    width: 500px;
+    padding-left: -5;
+    font-size: 1.5em;
+}
+.chamada > p{
+    margin: 5px 0px;
+    width: 400px;
+}
+.principal{
+    /*background-image: url(./icaro-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 90%;*/
+    padding-left: 50px;
+    padding-right: -70px;
+    margin: 0px;
+    width: 90%;
+    height: 90vh;
+}
+h1, h2, h4{
+    width: 500px;
+    margin: 1px;
+    padding: 1px;
+}
+
+.secao-de-captura{
+    padding-top: 50px;
+    width: 600px;
+    margin: auto;
+    text-align: center;
+}
+input, button{
+    width: 90%;
+    max-width: 500px;
+    height: 30px;
+    border: 1.5px solid rgb(170, 16, 49);
+    box-shadow: 0px 0px 10px 1px rgb(170,16,40);
+    padding: 1px 3px;
+    margin: 3px 0px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    display: block;
+}
+button{
+    width: calc(90% + 9px);
+    height: 40px;
+    border: none;
+    color: black;
+    background-color: rgb(0, 255, 255);
+    font-size: 20pt;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+}
+button:hover{
+    box-shadow: 0px 0px 40px 5px rgb(0, 255, 255);
+    font-size: 22pt;
+}
+.artigo{
+    width: 80%;
+    margin: auto;
+}
+.artigo > div {
+    margin: 0px;
+}
+.artigo > div > h2{
+    width: auto;
+}
+.texto-direita{
+    position: relative;
+    text-align: right;
+    padding: 10px 0px;
+}
+.icaro{
+    padding-top: 30px;
+}
+.icaro > div{
+    display: flex;
+    width: 60%;
+    max-width: 1000px;
+    font-size: 1.4em;
+}
+#icarodecarvalho{
+   width: 285px;
+   margin-right: 15px;
+}
+a{
+    text-decoration: none;
+}
+
+
+footer{
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.452);
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px 10px 10px 0px;
+    font-weight: lighter;
+    margin-left: -10px;
+}
+
+
+@media (max-width: 760px) {
+
+    *{
+        max-width: 99%;
+        margin: auto;
+    }
+    .principal{
+        background-image: none;
+        padding-top: 10px;
+        margin-bottom: 15px;
+    }
+    .icaro > div{
+        display: block;
+        width: 90%;
+        text-align: justify;
+        padding: 0px;
+    }
+    #icarodecarvalho{
+        width: 300px;
+        margin: 0px;
+    }
+    footer{
+        padding: 10px 10px 10px 6px;
+    }
+}

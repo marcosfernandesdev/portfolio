@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bhaskara</title>
+</head>
+<body>
+    <h1>Calcular equação do 2° grau:</h1>
+    <main>
+        <section class="operacoes">
+            <div class="valores">
+                <label for="a">Valor de <em>a</em>:</label>
+                <input type="number" name="a" id="a">
+                <label for="b">Valor de <em>b</em>:</label>
+                <input type="number" name="b" id="b">
+                <label for="c">Valor de <em>c</em>:</label>
+                <input type="number" name="c" id="c"> <br>
+
+                <button onclick="calcular()">Calcular raízes</button>
+            </div>
+
+            <div id="final">
+                <div id="formula"></div>
+                <div id="resultado"></div>
+            </div>
+        </section>
+    </main>
+    <footer>Feito por <strong>Marcos Fernandes</strong></footer>
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de gorjeta</title>
+    <style>
+
+:root{
+    --cor1: #56E39F;
+    --cor2: #51c09d;
+    --cor3: #ED6A5A;
+    --cor4: #1C5253;
+    --cor5: #001603;
+    --cor6: #d8f0f1;
+}
+
+body{
+    background-color: #1C5253;
+    color: #ED6A5A;
+    font-size: 1.3em;
+}
+h1{ text-align: center;}
+h2,h3,h4,h5{
+   margin: 5px 0px 3px 0px; 
+}
+label{
+    font-size: 0.9em;
+}
+main{
+    width: 80%;
+    background-color: var(--cor6);
+    max-width: 800px;
+    margin: auto;
+    border-radius: 5px;
+    padding: 5px;
+}
+section{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+section > div {
+    width: 90%;
+    min-width: 100px;
+    max-width: 350px;
+    color: var(--cor2);
+    background-color: var(--cor4);
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+input{
+    background-color: transparent;
+    border: none;
+    color: var(--cor6);
+    border-bottom: 1px solid var(--cor5);
+}
+.porcentagem{
+    margin-top: 16px;
+}
+.resultado > div{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+.resultado > div > h5{
+    font-size: 1.3rem;
+    width: auto;
+    min-width: 40px;
+}
+span {
+    margin-left: 5px;
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--cor1);
+}
+button{
+    width: 45%;
+    height: 30px;
+    color: var(--cor2);
+    background-color: var(--cor5);
+    border: none;
+    border-radius: 5px;
+    margin: 5px 3px;
+}
+button:active{
+    background-color:rgb(48, 48, 48);
+}
+
+
+
+
+footer{
+    color: var(--cor5);
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid white;
+    bottom: 5px;
+    left: 0px;
+    position: absolute;
+}
+
+@media (max-width: 760px){
+    section{
+        display: block;
+        margin: auto;
+    }
+    section > div {
+        margin: auto;
+        margin-bottom: 10px;
+    }
+}
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Calculadora de gorjetas</h1>
+        <section>
+            <div class="dados">
+                <label for="preco">Preço: <br></label>
+                R$<input type="number" name="preco" id="preco">
+                <div class="porcentagem">
+                    <h3>Porcentagem</h3>
+                    <button class="btn-porce" onclick="adicionar(5)">5%</button>
+                    <button class="btn-porce" onclick="adicionar(10)">10%</button>
+                    <div class="personalizada">
+                        <label for="personalizada">Personalizada: <br></label>
+                        <input type="number" name="personalizada" id="personalizada">%
+                    </div>
+                </div>
+                <button class="btn_result" onclick="calcular()">Calcular</button>
+            </div>
+
+            <div class="resultado">
+                <div><h5>Taxa:</h5> <div> R$<span id="taxa">0.00</span></div> </div>
+                <div><h5>Total:</h5> <div>R$<span id="total">0.00</span></div> </div>
+            </div>
+        </section>  
+
+    </main>
+
+
+    <footer>Feito por <strong>Marcos Fernandes</strong></footer>
+</body>
+<script>
+    var precotxt = document.getElementById('preco');
+var porcentagemtxt = document.getElementById('personalizada');
+var taxatxt = document.getElementById('taxa');
+var totaltxt = document.getElementById('total');
+
+function adicionar(n) {
+    porcentagemtxt.value = n;
+}
+
+function calcular() {
+    var precot = String(precotxt.value);
+    var porcentagemt = String(porcentagemtxt.value);
+    if (precot.length > 0 && porcentagemt.length > 0){
+        let preco = Number(precot);
+        let porcentagem = Number(porcentagemt);
+        let taxa = preco * porcentagem / 100;
+        let total = taxa + preco;
+        taxatxt.innerHTML = taxa.toFixed(2);
+        totaltxt.innerHTML = total.toFixed(2);
+    } else {
+        alert('Adicione os valores.');
+    }
+}
+
+</script>
+</html>

@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+:root{
+    --cor1: #0A2342;
+    --cor2: #07448F;
+    --cor3: #421511;
+    --cor4: #798F0E;
+    --cor5: #8F2015;
+}
+
+body{
+    background-color: var(--cor1);
+    color: white;
+}
+main{
+    width: 99%;
+    max-width: 650px;
+    margin: auto;
+}
+h1{text-align: center;}
+.placar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.placar > div {
+    width: 70px;
+    height: 70px;
+    color: black;
+    text-align: center;
+    background-color: beige;
+    border-radius: 5px;
+}
+span{
+    display: block;
+    font-size: 2em;
+    margin-top: 6px;
+}
+#resultado{
+    font-size: 3em;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    height: 220px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#resultado > div > img {
+    width: 125px;
+}
+#resultado > div {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#escolhaDoJogador{
+    background-color: var(--cor2);
+    border-radius: 10px 0px 0px 10px;
+}
+#escolhaDaMaquina{
+    background-color: var(--cor5);
+    border-radius: 0px 10px 10px 0px;
+}
+#status{
+    display: block;
+    height: 30px;
+    text-align: center;
+}
+.opcoes{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.opcoes > button {
+    width: 100px;
+    height: 100px;
+    color: white;
+    background-color: var(--cor2);
+    border: 10px solid var(--cor4);
+    border-radius: 50px;
+}
+.opcoes > button:hover {background-color: #0c5ab9;}
+.opcoes > button:active {box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.692);}
+#zerar{
+    font-size: 11pt;
+    font-weight: bold;
+    color: white;
+    background-color: var(--cor5);
+    width: 50px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    position: absolute;
+    right: 5px;
+    bottom: 50px;
+}
+
+footer{
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid white;
+    position: absolute;
+    left: 0px;
+    bottom: 5px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body onclick="diminuirFonte()">
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+
+
+    <main>
+        <div id="main" onclick="diminuirFonte()">
+            <div id="visor">
+
+            </div> <br>
+
+            <div id="operacoes_avancadas">
+                <input type="button" value="(" onclick="adicionar('(')">
+                <input type="button" value=")"onclick="adicionar(')')">
+                <input type="button" value="^" onclick="adicionar('**')">
+                <input type="button" value="π" onclick="adicionar('3,14')">
+            </div>
+
+            <div id="limpar">
+                <input type="button" value="⇚" onclick="apagar()">
+                <input type="button" value="C" onclick="limpar()" >
+            </div>
+
+            <div id="numeros">
+                <input type="button" value="9" onclick="adicionar(9)">
+                <input type="button" value="8" onclick="adicionar(8)">
+                <input type="button" value="7" onclick="adicionar(7)">
+                <input type="button" value="6" onclick="adicionar(6)">
+                <input type="button" value="5" onclick="adicionar(5)">
+                <input type="button" value="4" onclick="adicionar(4)">
+                <input type="button" value="3" onclick="adicionar(3)">
+                <input type="button" value="2" onclick="adicionar(2)">
+                <input type="button" value="1" onclick="adicionar(1)">
+                <input type="button" value="0" onclick="adicionar(0)">
+                <input type="button" value="." onclick="adicionar('.')">
+            </div>
+
+            <div id="operacoes_basicas">
+                <input type="button" value="x" onclick="adicionar('*')">
+                <input type="button" value=":" onclick="adicionar('/')">
+                <input type="button" value="-" onclick="adicionar('-')">
+                <input type="button" value="+" onclick="adicionar('+')">
+                <input type="button" value="=" onclick="resultado()" style="
+                background-color: darkred;"> 
+            </div>
+    </div>
+
+    </main>
+
+
+    <footer>
+        <p>Feito por <a href="#"><strong>Marcos Levy</strong></a></p>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
