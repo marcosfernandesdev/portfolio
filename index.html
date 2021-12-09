@@ -54,6 +54,17 @@
         nav > div:hover > div{
             display: block;
         }
+        #projetos{
+            display: block;
+            background-color: transparent;
+            border-radius: 10px;
+            animation: pisca 1s ease-in-out 3;
+        }
+        @keyframes pisca {
+            0%{background-color: transparent;}
+            50%{background-color: rgb(255, 0, 0); color: white;}
+            100%{background-color:  transparent;}
+        }
         .secao > a {
             color: var(--cor2);
             font-size: 1.1em;
