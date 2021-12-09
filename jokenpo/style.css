@@ -102,10 +102,32 @@ span{
 }
 
 footer{
-    text-align: center;
-    width: 100%;
-    border-top: 1px solid white;
-    position: absolute;
-    left: 0px;
-    bottom: 5px;
+	width: 100%;
+    margin: 0px;
+    font-weight: lighter;
+	display: flex;
+	justify-content: center;
+}
+footer > a {
+    text-decoration: none;
+    color: rgb(0, 18, 100);
+    font-weight: bolder;
+	margin-left: 5px;
+}
+a:hover{
+	text-decoration: underline;
+	transform: translatey(0px);
+	animation: flutua 0.5s ease-in-out 3;
+}
+@keyframes flutua {
+	0%{
+		transform: translatey(0px);
+	}
+	50%{
+		transform: translatey(-10px);
+	}
+	100%{
+		transform: translatey(0px);
+	}
+
 }
