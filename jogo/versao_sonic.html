@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Sonic</title>
+    <style>
+        main{
+            position: fixed;
+            width: 100%;
+        }
+        #fundo{
+            width: 800px;
+            height: 400px;
+            padding: 0px;
+            background-color: rgb(0, 200, 0);
+            margin: auto;
+        }
+        #pontuacao{
+            font-size: 2em;
+            text-align: center;
+            width: 40px;
+            height: 40px;color: black;
+            border: 1px solid black;
+            margin: auto;
+            margin-top: 30px;
+        }
+        #personagem{
+            width: 10px;
+            height: 10px;
+            position: relative;
+            top: 10px;
+            left: 10px;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        #ponto{
+            width: 10px;
+            height: 10px;
+            position: relative;
+            transform: translate(-50%, -50%);
+        }
+        img{
+            width: 50px;
+        }
+
+    </style>
+</head>
+<body onload="criarPonto()">
+    <main>
+        <div id="fundo">
+            <div id="personagem">
+                <img src="https://www.olympicvideogames.com/sonic/assets/img/copy_photo_image@2x.png" height="50">
+            </div> 
+        </div>
+        <div id="pontuacao">0</div>
+
+    </main>
+    <script>
+        var fundo = document.getElementById('fundo');
+        var placar = document.getElementById('pontuacao');
+        var personagem = document.getElementById('personagem');
+
+        window.addEventListener("keydown", moverPersonagem);
+
+        var posicaoX = 0;
+        var posicaoY = 0;
+        var eixoX = 0;
+        var eixoY = 0;
+        var ponto = document.createElement('div');
+        var img = document.createElement('img');
+        img.src = 'https://4.bp.blogspot.com/-0GEL-zPh4cE/UidVeeQmecI/AAAAAAAAGb4/16gKZ70Vii0/s200/Classic_Eggman.png';
+        ponto.appendChild(img)
+        var pontuacao = 0;
+
+        function moverPersonagem(key){
+            if (key.keyCode == '39'){
+                posicaoX += 10;
+                personagem.style.left = `${posicaoX}px`; // vai pra direita
+            } else if (key.keyCode == "37"){
+                posicaoX -= 10;
+                personagem.style.left = `${posicaoX}px`; //vai pra esquerda
+            } else if (key.keyCode == "38"){ 
+                posicaoY -= 10;
+                personagem.style.top = `${posicaoY}px`; //vai pra cima
+            } else if (key.keyCode == "40"){ 
+                posicaoY += 10;
+                personagem.style.top = `${posicaoY}px`; // vai pra baixo
+            }
+
+            if (posicaoX == eixoX*10 && posicaoY == eixoY*10) {
+                pontuacao++;
+                placar.innerText = pontuacao;
+                criarPonto();
+            }
+        }
+
+        function criarPonto(){
+            ponto.remove();
+            let minX = Math.ceil(5);
+            let maxX = Math.floor(75);
+            eixoX = Math.ceil(Math.floor(Math.random() * (maxX - minX)) + minX);
+            
+            let minY = Math.ceil(5);
+            let maxY = Math.floor(35);
+            eixoY = Math.ceil(Math.floor(Math.random() * (maxY - minY)) + minY); 
+            
+            ponto.id = 'ponto';
+            ponto.style.top = `${eixoY*10-10}px`;
+            ponto.style.left = `${eixoX*10}px`;
+            fundo.appendChild(ponto);
+        }
+
+    </script>
+</body>
+</html>

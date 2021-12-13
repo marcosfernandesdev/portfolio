@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+    <style>
+        #fundo{
+            width: 400px;
+            height: 400px;
+            padding: 0px;
+            background-color: rgb(0, 200, 0);
+            margin: auto;
+        }
+        #pontuacao{
+            font-size: 2em;
+            text-align: center;
+            width: 40px;
+            height: 40px;color: black;
+            border: 1px solid black;
+            margin: auto;
+            margin-top: 30px;
+        }
+        #personagem, #cauda{
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            position: relative;
+            top: 10px;
+            left: 10px;
+            transform: translate(-50%, -50%);
+        }
+       
+        #ponto{
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            position: relative;
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
+</head>
+<body onload="criarPonto()">
+    <main>
+        <div id="fundo">
+            <div id="personagem"></div> 
+        </div>
+        <div id="pontuacao">0</div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
