@@ -4,8 +4,8 @@ var personagem = document.getElementById('personagem');
 
 
 window.addEventListener("keydown", moverPersonagem);
-var posicaoX = 0;
-var posicaoY = 0;
+var posicaoX = 20;
+var posicaoY = 20;
 var eixoX = 0;
 var eixoY = 0;
 var ponto = document.createElement('div');
@@ -16,15 +16,27 @@ var pontuacao = 0;
 function moverPersonagem(key){
     if (key.keyCode == '39'){
         posicaoX += 10;
+        if (posicaoX > 400){ //caso passe do lado direito ele volta pra esquerda
+            posicaoX = 10;
+        } 
         personagem.style.left = `${posicaoX}px`; // vai pra direita
     } else if (key.keyCode == "37"){
         posicaoX -= 10;
+        if (posicaoX < 10){ //caso passe do lado esquerdo ele volta pra direita
+            posicaoX = 400;
+        }
         personagem.style.left = `${posicaoX}px`; //vai pra esquerda
-    } else if (key.keyCode == "38"){ 
+    } else if (key.keyCode == "38"){
         posicaoY -= 10;
+        if (posicaoY < 10){//caso passe de cima ele vai pra baixo
+            posicaoY = 400
+        }
         personagem.style.top = `${posicaoY}px`; //vai pra cima
-    } else if (key.keyCode == "40"){ 
+    } else if (key.keyCode == "40"){
         posicaoY += 10;
+        if (posicaoY > 400){//caso passe de baixo ele vai pra cima
+            posicaoY = 10
+        }
         personagem.style.top = `${posicaoY}px`; // vai pra baixo
     }
 
@@ -33,6 +45,7 @@ function moverPersonagem(key){
         placar.innerText = pontuacao;
         criarPonto();
     }
+    
 }
 
 function criarPonto(){
