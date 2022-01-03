@@ -104,19 +104,21 @@ a{
 
 footer{
     border-top: 1px solid rgba(255, 255, 255, 0.452);
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
-    padding: 10px 10px 10px 0px;
+    padding: 10px -10px 10px 0px;
     margin-left: -10px;
 	width: 100%;
-    margin: 0px;
     font-weight: lighter;
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
 }
-footer > a {
+footer > div{
+    display: flex;
+}
+footer > div > a {
     text-decoration: none;
-    color: rgb(0, 18, 100);
+    color: rgb(0, 33, 180);
     font-weight: bolder;
 	margin-left: 5px;
 }
@@ -149,6 +151,7 @@ a:hover{
         background-image: none;
         padding-top: 10px;
         margin-bottom: 15px;
+        height: auto;
     }
     .icaro > div{
         display: block;
@@ -161,6 +164,7 @@ a:hover{
         margin: 0px;
     }
     footer{
-        padding: 10px 10px 10px 6px;
+        text-align: center;
+        padding: 9px;
     }
 }

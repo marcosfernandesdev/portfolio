@@ -36,7 +36,9 @@ input{
 	border-bottom: 1px solid gray;
 }
 .informacoes{
-	width: 100%;
+	width: 97%;
+	min-width: 97%;
+	max-width: 97%;
 	height: 50px;
 	line-break: loose;
 	line-height: 20px;

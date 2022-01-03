@@ -11,6 +11,7 @@
 body{
     background-color: var(--cor1);
     color: white;
+    height: 95vh;
 }
 main{
     width: 99%;
@@ -103,14 +104,14 @@ span{
 
 footer{
 	width: 100%;
-    margin: 0px;
+    margin-top: 45px;
     font-weight: lighter;
 	display: flex;
 	justify-content: center;
 }
 footer > a {
     text-decoration: none;
-    color: rgb(0, 18, 100);
+    color: rgb(155, 174, 255);
     font-weight: bolder;
 	margin-left: 5px;
 }
